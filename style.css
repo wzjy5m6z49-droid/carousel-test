@@ -10,9 +10,57 @@ body{
 .carouselRoot{
   padding:16px;
   box-sizing:border-box;
+}
+
+.entrance-fadeUp{
   opacity:0;
   transform:translateY(18px) scale(.985);
   animation:fadeUp .7s cubic-bezier(.22,.8,.2,1) forwards;
+}
+
+.entrance-scaleIn{
+  opacity:0;
+  transform:scale(.92);
+  animation:scaleIn .7s cubic-bezier(.22,.8,.2,1) forwards;
+}
+
+.entrance-slideIn{
+  opacity:0;
+  transform:translateX(-40px);
+  animation:slideIn .7s cubic-bezier(.22,.8,.2,1) forwards;
+}
+
+.entrance-blurIn{
+  opacity:0;
+  transform:translateY(12px) scale(.985);
+  filter:blur(12px);
+  animation:blurIn .9s cubic-bezier(.22,.8,.2,1) forwards;
+}
+
+.entrance-none{
+  opacity:1;
+}
+
+@keyframes scaleIn{
+  to{
+    opacity:1;
+    transform:scale(1);
+  }
+}
+
+@keyframes slideIn{
+  to{
+    opacity:1;
+    transform:translateX(0);
+  }
+}
+
+@keyframes blurIn{
+  to{
+    opacity:1;
+    transform:translateY(0) scale(1);
+    filter:blur(0);
+  }
 }
 
 @keyframes fadeUp{
