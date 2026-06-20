@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+
+<div class="carouselRoot">
+
+  <div class="carouselShell">
+
+    <button class="arrow prev" id="prev" aria-label="前へ"></button>
+
+    <div class="carousel" id="carousel">
+      <div class="slider" id="slider"></div>
+    </div>
+
+    <button class="arrow next" id="next" aria-label="次へ"></button>
+
+  </div>
+
+  <div class="dotsWrap" id="dotsWrap">
+    <div class="dots" id="dots"></div>
+  </div>
+
+</div>
+
+<script>
+const v = new Date().getTime();
+
+document.write(
+  '<link rel="stylesheet" href="./style.css?v=' + v + '">'
+);
+
+document.write(
+  '<script src="https://digitalgojp.sharepoint.com/sites/NTA_IBHub12/SiteAssets/carousel/holiday-data.js?v=' + v + '"><\/script>'
+);
+
+document.write(
+  '<script src="https://digitalgojp.sharepoint.com/sites/NTA_IBHub12/SiteAssets/carousel/carousel-config.js?v=' + v + '"><\/script>'
+);
+
+document.write(
+  '<script src="https://digitalgojp.sharepoint.com/sites/NTA_IBHub12/SiteAssets/carousel/carousel-data.js?v=' + v + '"><\/script>'
+);
+
+document.write(
+  '<script src="./app.js?v=' + v + '"><\/script>'
+);
+</script>
+
+</body>
+</html>
