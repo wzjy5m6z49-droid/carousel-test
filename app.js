@@ -18,6 +18,9 @@ const SHADOW_STRENGTH =
 const SHOW_DETAIL_BUTTON =
   config.showDetailButton !== false;
 
+const ENTRANCE_ANIMATION =
+  config.entranceAnimation || "fadeUp";
+
 const DOT_POSITION =
   config.dotPosition || "overlay";
 
@@ -31,6 +34,13 @@ const ARROW_POSITION =
   config.arrowPosition || "inside";
 
 const shell = document.querySelector(".carouselShell");
+
+const root =
+  document.querySelector(".carouselRoot");
+
+root.classList.add(
+  `entrance-${ENTRANCE_ANIMATION}`
+);
 
 const slider = document.getElementById("slider");
 const dots = document.getElementById("dots");
