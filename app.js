@@ -510,6 +510,23 @@ function render(){
     dot.innerHTML =
       '<span class="progressFill"></span>';
 
+    const progressFill =
+  dot.querySelector(".progressFill");
+
+progressFill.addEventListener(
+  "animationend",
+  () => {
+
+    if(index !== current){
+      return;
+    }
+
+    next();
+    restart();
+
+  }
+);
+
     dot.onclick = () => {
       current = index;
       update();
@@ -603,6 +620,25 @@ function restart(){
       }
     });
 
+  Array
+    .from(dots.children)
+    .forEach(dot => {
+
+      const fill =
+        dot.querySelector(".progressFill");
+
+      if(!fill){
+        return;
+      }
+
+      fill.style.animation = "none";
+
+      void fill.offsetWidth;
+
+      fill.style.animation = "";
+
+    });
+
   if(!AUTO_PLAY){
     return;
   }
@@ -611,8 +647,6 @@ function restart(){
     return;
   }
 
-  timer =
-    setInterval(next, SLIDE_INTERVAL);
 }
 
 
