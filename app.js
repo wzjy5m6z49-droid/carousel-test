@@ -480,6 +480,8 @@ return (
   new Date(a.Modified || 0)
 );
 
+});
+
 
 function render(){
   if(!items.length){
