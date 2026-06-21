@@ -689,9 +689,7 @@ carousel.addEventListener("mouseleave", () => {
     return;
   }
 
-  carousel.classList.remove("paused");
-
-  restart();
+  root.classList.remove("paused");
 });
 
-render();
+render();carousel
