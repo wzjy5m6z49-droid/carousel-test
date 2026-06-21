@@ -427,33 +427,6 @@ const items = rawItems
     return true;
   })
   .sort((a, b) => {
-    const aTime =
-      !!(a.ShowStartTime || a.ShowEndTime);
-
-    const bTime =
-      !!(b.ShowStartTime || b.ShowEndTime);
-
-    if(aTime && !bTime){
-      return -1;
-    }
-
-    if(!aTime && bTime){
-      return 1;
-    }
-
-    const aBase =
-      !!a.BaseDay;
-
-    const bBase =
-      !!b.BaseDay;
-
-    if(aBase && !bBase){
-      return -1;
-    }
-
-    if(!aBase && bBase){
-      return 1;
-    }
 
     const priorityMap = {
   "最優先": 1,
