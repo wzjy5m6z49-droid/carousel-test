@@ -677,11 +677,7 @@ carousel.addEventListener("mouseenter", () => {
     return;
   }
 
-  carousel.classList.add("paused");
-
-  if(timer){
-    clearInterval(timer);
-  }
+  root.classList.add("paused");
 });
 
 carousel.addEventListener("mouseleave", () => {
