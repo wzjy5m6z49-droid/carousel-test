@@ -111,6 +111,8 @@ const BORDER_RADIUS =
 const DETAIL_BUTTON_TEXT =
   config.detailButtonText || "詳しく見る";
 
+const SORT_ORDER =
+  config.sortOrder || "更新日の新しい順";
 
 let current = 0;
 let timer = null;
@@ -466,11 +468,17 @@ if(priorityDiff !== 0){
   return priorityDiff;
 }
 
+if(SORT_ORDER === "更新日の古い順"){
+  return (
+    new Date(a.Modified || 0) -
+    new Date(b.Modified || 0)
+  );
+}
+
 return (
   new Date(b.Modified || 0) -
   new Date(a.Modified || 0)
 );
-});
 
 
 function render(){
